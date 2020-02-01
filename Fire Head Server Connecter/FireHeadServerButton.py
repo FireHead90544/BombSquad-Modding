@@ -75,9 +75,9 @@ class ServerStatusWindow(Window):
                 try:
                     accessible = True
                     if hasattr(httplib, 'HTTPS'):
-                       url = 'https://raw.githubusercontent.com/FireHead90544/BombSquad-Modding/master/index.json'
+                       url = 'https://raw.githubusercontent.com/FireHead90544/BombSquad-Modding/master/Fire%20Head%20Server%20Connecter/index.json'
                     else:
-                       url = 'https://raw.githack.com/FireHead90544/BombSquad-Modding/master/index.json'
+                       url = 'https://raw.githack.com/FireHead90544/BombSquad-Modding/master/Fire%20Head%20Server%20Connecter/index.json'
                     try:
                         response = json.loads(urllib2.urlopen(urllib2.Request(url)).read())
                         fetchedAddress = response['Address']
