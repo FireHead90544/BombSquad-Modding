@@ -1,4 +1,4 @@
-from bsUI import uiGlobals, gSmallUI, Window, gMedUI, MainMenuWindow            #Created By FireHead # http://github.com/FireHead90544
+from bsUI import uiGlobals, gSmallUI, Window, gMedUI, MainMenuWindow            #Created By Fire Head # http://github.com/FireHead90544
 import bs, bsUtils, bsInternal, bsMainMenu, threading, time, json, urllib2, httplib
 
 _server_status_thread_count = 0
@@ -77,7 +77,7 @@ class ServerStatusWindow(Window):
                     if hasattr(httplib, 'HTTPS'):
                        url = 'https://raw.githubusercontent.com/FireHead90544/BombSquad-Modding/master/Fire%20Head%20Server%20Connecter/index.json'
                     else:
-                       url = 'https://raw.githack.com/FireHead90544/BombSquad-Modding/master/Fire%20Head%20Server%20Connecter/index.json'
+                       url = 'https://rawcdn.githack.com/FireHead90544/BombSquad-Modding/af3642cd10ff51e9095b77b42627e5d452ce4002/Fire Head Server Connecter/index.json'
                     try:
                         response = json.loads(urllib2.urlopen(urllib2.Request(url)).read())
                         fetchedAddress = response['Address']
@@ -236,7 +236,7 @@ class ServerStatusWindow(Window):
             return
         self.Timir = None
         bsInternal._connectToParty(finalFetchedAddress, finalFetchedPort)
-        #bs.playSound(bs.getSound("achievement"))
+        bs.playSound(bs.getSound("achievement"))
         
 def fadeToRed():
     activity = bsInternal._getForegroundHostActivity()
@@ -303,7 +303,7 @@ def newMethod(self, *args, **kwargs):
                       transitionDelay=delay,
                       color=(0.75, 1.0, 0.7),
                       maxWidth=width*0.33,
-                      text='Fire Head',
+                      text='.',
                       hAlign='center', vAlign='center')
         iconSize = -width*0.38
         bs.imageWidget(parent=self._rootWidget, size=(iconSize, iconSize),
