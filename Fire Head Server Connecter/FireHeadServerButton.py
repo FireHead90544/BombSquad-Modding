@@ -42,7 +42,7 @@ class ServerStatusWindow(Window):
                           text='', scale=1.0,
                           maxWidth=width*0.9, maxHeight=height-75)
                           
-        self.ts = bs.textWidget(parent=self._rootWidget,shadow=1.0,
+        self.ts = bs.Widget(parent=self._rootWidget,shadow=1.0,
                           position=(width*0.75, height-5-(height-75)*0.8),
                           size=(0, 0), hAlign="left", vAlign="center",
                           text='', scale=1.0,
@@ -75,9 +75,9 @@ class ServerStatusWindow(Window):
                 try:
                     accessible = True
                     if hasattr(httplib, 'HTTPS'):
-                       url = 'https://raw.githubusercontent.com/FireHead90544/BombSquad-Modding/master/Fire%20Head%20Server%20Connecter/index.json'
+                       url = 'https://raw.githubusercontent.com/FireHead90544/BombSquad-Modding/master/index.json'
                     else:
-                       url = 'https://rawcdn.githack.com/FireHead90544/BombSquad-Modding/af3642cd10ff51e9095b77b42627e5d452ce4002/Fire Head Server Connecter/index.json'
+                       url = 'https://rawcdn.githack.com/FireHead90544/BombSquad-Modding/8acbc9aec7f60193648461957334cbc1a47f89a7/index.json'
                     try:
                         response = json.loads(urllib2.urlopen(urllib2.Request(url)).read())
                         fetchedAddress = response['Address']
@@ -303,7 +303,7 @@ def newMethod(self, *args, **kwargs):
                       transitionDelay=delay,
                       color=(0.75, 1.0, 0.7),
                       maxWidth=width*0.33,
-                      text='.',
+                      text='FireeY',
                       hAlign='center', vAlign='center')
         iconSize = -width*0.38
         bs.imageWidget(parent=self._rootWidget, size=(iconSize, iconSize),
